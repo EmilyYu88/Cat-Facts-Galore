@@ -1,0 +1,127 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <title>
+        Cat Facts Galore
+    </title>
+
+<style>
+body{
+    background-color: rgb(215, 187, 218);    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    }
+.button{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(176, 149, 206);
+    color: rgb(139, 32, 86);
+    padding: 16px 24px;
+    font-size: 15px;
+    font-weight: 650;
+}
+.name{
+    width: 100px;
+    height:80px;
+}
+.topnav a {
+    float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover{
+    background-color:cornflowerblue;
+    color:black
+}
+.topnav a.active{
+    background-color:rgb(37, 90, 189);
+    color:white;
+
+}
+</style>
+</head>
+<body>
+
+   <div class='topnav'>
+        <a href='apiproject.html'>Home</a></li>
+        <a href='random.html'>User Generator</a></li>
+        <a class='active' href='givefeedback.html'>Give Feedback</a></li>
+
+    <br>
+    <br>
+    <h1 style="color: black (20, 230, 230, 0.685); font-size:65px">Help Cat Facts Galore Improve!</h1>
+   <br>
+    <p style='font-size:21px'>Rate your experience with our website (10 being a really nice experience).</p>
+   <select form='rate' id='rate'>
+        <option value='-'>-</option>
+       <option value='1'>1</option>
+       <option value='2'>2</option>
+       <option value='3'>3</option>
+       <option value='4'>4</option>
+       <option value='5'>5</option>
+       <option value='6'>6</option>
+       <option value='7'>7</option>
+       <option value='8'>8</option>
+       <option value='9'>9</option>
+       <option value='10'>10</option>
+   </select>
+   <p style='font-size:21px'>Rate the quality of our cat facts (10 being very interesting).</p>  
+   <select form='rate' id='rates'>
+    <option value='-'>-</option>
+    <option value='1'>1</option>
+    <option value='2'>2</option>
+    <option value='3'>3</option>
+    <option value='4'>4</option>
+    <option value='5'>5</option>
+    <option value='6'>6</option>
+    <option value='7'>7</option>
+    <option value='8'>8</option>
+    <option value='9'>9</option>
+    <option value='10'>10</option>
+</select>
+<p style='font-size:21px'>How likely are you to recommend this website to someone else?</p>  
+   <select form='ratee' id='ratee'>
+    <option value='-'>-</option>
+    <option value='2'>Very Likely</option>
+    <option value='3'>Likely</option>
+    <option value='4'>Neutral</option>
+    <option value='5'>Unlikely</option>
+    <option value='6'>Very Unlikely</option>
+    </select>
+    <p style='font-size:21px'>How satisfied are you after using Cat Facts Galore?.</p>  
+   <select form='ratee' id='ratees'>
+    <option value='-'>-</option>
+    <option value='2'>Very Satisfied</option>
+    <option value='3'>Satisfied</option>
+    <option value='4'>Neutral</option>
+    <option value='5'>Unsatisified</option>
+    <option value='6'>Very Unsatisfied</option>
+</select>
+
+<br>
+<br>
+<br>
+<input type="button" id="btn-1" value="SUBMIT" class="button">
+<br>
+<br>
+<div id='message'></div>
+</body>
+<script>
+$('#btn-1').click(function(){
+    let ratee=$('#ratee').val();
+    let ratees=$('#ratees').val();
+    let rates =$('#rates').val();
+    let rate =$('#rate').val();
+    if (rate=='-' || ratee=='-' || rates=='-'|| ratees=='-'){
+        $('#message').html('Please fill out all questions!');
+    }
+    else{
+        $('#message').html('Submitted! Thank you for your response!');
+    }
+})
+</script>
+</html>
